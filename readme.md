@@ -64,10 +64,10 @@ void loop() {
   int leftState = digitalRead(irLeft);
   int rightState = digitalRead(irRight);
 
-  if (leftState == HIGH && rightState == High) {
+  if (leftState == HIGH && rightState == HIGH) {
     // Both sensors on black - go forward
     forward();
-  } else if (leftState == High && rightState == LOW) {
+  } else if (leftState == HIGH && rightState == LOW) {
     // Left on black - turn left
     turnLeft();
   } else if (leftState == LOW && rightState == HIGH) {
