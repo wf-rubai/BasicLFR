@@ -52,6 +52,12 @@ void setup() {
   pinMode(IN2, OUTPUT);
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
+
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+
+  digitalWtite(7, HIGH);
+  digitalWtite(8, HIGH);
 }
 
 void loop() {
