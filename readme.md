@@ -56,21 +56,21 @@ void setup() {
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
 
-  digitalWrite(7, HIGH);
-  digitalWrite(8, HIGH);
+  digitalWtite(7, HIGH);
+  digitalWtite(8, HIGH);
 }
 
 void loop() {
   int leftState = digitalRead(irLeft);
   int rightState = digitalRead(irRight);
 
-  if (leftState == LOW && rightState == LOW) {
+  if (leftState == HIGH && rightState == High) {
     // Both sensors on black - go forward
     forward();
-  } else if (leftState == LOW && rightState == HIGH) {
+  } else if (leftState == High && rightState == LOW) {
     // Left on black - turn left
     turnLeft();
-  } else if (leftState == HIGH && rightState == LOW) {
+  } else if (leftState == LOW && rightState == HIGH) {
     // Right on black - turn right
     turnRight();
   } else {
